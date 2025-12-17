@@ -17,7 +17,7 @@ import { startTradeSettlementService } from './services/tradeSettlementService';
 dotenv.config();
 
 const app: Application = express();
-const PORT = process.env.PORT || 4000;
+const PORT = parseInt(process.env.PORT || '5000', 10);
 
 app.use(helmet());
 app.use(
