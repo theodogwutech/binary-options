@@ -59,7 +59,7 @@ const startServer = async () => {
       logger.warn('Redis connection failed. Continuing without caching.');
     }
 
-    app.listen(PORT, () => {
+    app.listen(PORT, '0.0.0.0', () => {
       logger.info(`Server running on port ${PORT} in ${process.env.NODE_ENV} mode`);
 
       // Start automatic trade settlement service
